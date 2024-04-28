@@ -1,0 +1,374 @@
+/* En Css Los comentarios son con */
+
+/* antes se tiene que enlazar (link) el Css al Html debajo del nombre titulo */
+
+/*------------------------------------------------------------*/
+/*  <title>Portafolio4</title>
+    <link rel="stylesheet" href="CSS-STYLE-PORTAFILIO4.css" */
+/*------------------------------------------------------------*/
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                                       FONDO DE PAGINA                                         */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+
+body{
+    background-image: url(/Imagenes/Fondo12.png);/*---Esto es para colocar fondo*/
+    background-repeat: no-repeat; /*------------------Esto para que no se repita la imagen*/
+    background-size:cover;/*--------------------------Este para que la imagen se ajuste al tamano del fon*/
+    background-attachment: fixed; /*------------------Esto para que la imagen se quede fija*/
+    
+}
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                                       PARTE SUPERIOR                                          */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+.menu{
+    
+    display: flex; /*--------------------Esto es para que se alineen la imagen y el menu*/
+    align-items: center; /*--------------Esto para que se centre en la linea del div*/
+    justify-content: space-between; /*----------Esto para que se centre en la mitad de la pantalla*/
+}
+.logo img{
+    height: 60px;/*----------------------Tamano de la imagen*/
+}
+
+.links{
+    
+    font-size: 15px;/*-------------------Tamano de la letra*/
+    display: flex;/*---------------------Esto para alinear en horizontal los elementos dentro de links*/
+    list-style: none;/*------------------Esto para que los links no tengan puntos de lista*/
+}
+
+.links li a{
+    background-color: #ebebeb;
+    padding: 5px 20px;
+    border-radius: 50px;
+    box-shadow:  0px 0px 30px 0 white;
+    margin-right: 25px;/*----------------Esto hace que haya una separacion entre palabras*/
+    color: rgb(0, 0, 0);/*--------------------Color de la letra*/
+    text-decoration: none;/*-------------Esto hace que los links no esten subrayados*/
+}
+
+header a:hover{ 
+    color: rgb(20, 223, 71);/*----------------------Esto cambia el color de la letra a otro color*/
+}
+
+
+
+
+.toggle_btn{
+    padding-right: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    border-radius: 15px;
+
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                                     PRESENTACION Y FOTO                                       */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+
+#nombrepresentacion{
+    color: black;
+}
+
+.nombrepresentacion h4{
+    font-size: 60px; /*---------------------------Tamano de letra*/
+    padding-left: 30px;/*-------------------------Separacion de la izquierda*/
+}
+.nombrepresentacion p{
+    font-size: 20px; /*---------------------------Tamano de letra*/
+    padding-left:30px;
+    margin-top: -4%;
+    padding-left:30px;
+}
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                                           ABOUT ME                                            */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+
+
+#aboutme{
+    font-style: oblique;
+    padding-right: 10px;
+    color: black;/*-----------------------------Color de letra*/
+    border-radius: 15px;/*------------------------Radio de las esquinas*/
+    padding-left: 15px;/*-------------------------Esto para separar el contenido de la izquierda*/
+    margin-left: 1%;/*----------------------------Esto para separar el todo de la izquierda*/
+  /* margin-right: 55%; /*-------------------------Esto para hacer mas chica el todo*/
+    margin-top: 3%;/*-----------------------------Esto para separar el todo de la parte de presentacion*/
+  /* backdrop-filter: blur(100px);/*---------------Fltro de todo*/
+  /* box-shadow: 0 0 30px 0 black;/*-------------Sombra de filtro*/
+    display: flex;
+
+}
+
+#aboutme h2{ /*Un Poco Sobre Mi*/
+  /*  text-align: center; /*--------------------------Esto para centrar o Mover el titulo izq - cent - dere*/
+    padding-top: 2%; /*---------------------------Esto para separar de la parte superior*/
+    font-size: 25px; /*---------------------------Tamano de letra*/
+}
+
+.sobremi p{
+    box-shadow: 0 0 30px 0 black; /*------------Sombra de seccion*/
+    border-radius: 15px;
+    margin-right: 8%;
+    padding: 5%; 
+    text-align: left;
+    font-size: 15px;/*----------------------------Tamano de letra*/
+    backdrop-filter: blur(100px);
+    
+}
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                                            FOTOS                                              */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+
+.galeriafotos{
+    margin-top: -30px;
+    margin-left: 6%;
+    display: flex;
+    width: 500px;
+    height: 400px;
+}
+
+.galeriafotos img{
+    mask-image: linear-gradient(black 60%, transparent);
+    border-radius: 0px;
+    min-width: 0;
+    flex: 1 1 10px;
+    object-fit: cover;
+  /*  opacity: 0.7;  */
+    transition: 0.5s;
+}
+
+.galeriafotos img:hover {
+    flex: 1 1 280px;
+    opacity: 1;
+}
+
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                                        EXPERIENCIA                                            */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+
+
+#experienciatitulo{
+    
+    color: black;/*-----------------------------Color de letra*/
+    font-style: normal; /*------------------------Tipo de acomodo de letra (cursiva, acostad, normal*/
+    margin-top: 4%; /*----------------------------Separacion de arriba de seccion anterior*/
+  /*  text-decoration: underline;/*-----------------Este para colocar linea de decoracion*/
+}
+
+#experienciatitulo h2{ /*! Experiencia laboral !*/
+    font-style: oblique;
+    font-size: 30px; /*---------------------------Tamano de letra*/
+    text-align: center;/*-------------------------Este para que se centre*/
+}
+
+#experiencia img{
+    height: 40px; /*------------------------------Tamano de imagenes*/
+}
+
+#experiencia{
+    color: rgb(0, 0, 0); /*----------------------------Color de texto*/
+    margin-top: 2%; /*----------------------------Separacion de arriba de la anterior seccion*/
+    display: flex; /*-----------------------------Para que los div de la seccion se acomoden Horizontal*/
+}
+
+.wiwynn,
+.yazaki{
+    font-style: oblique;
+    padding: 50px;/*------------------------------Separacion de esquinas*/
+    margin: 1%; /*--------------------------------Separacion entre Div Wiwynn y Yazaki*/
+    font-size: 15px; /*---------------------------Tamano de letra*/
+    backdrop-filter: blur(100px);/*---------------Filtro de seccion*/
+    border-radius: 15px; /*-----------------------Radio de esquinas de seccion*/
+    box-shadow: 0 0 30px 0 black; /*------------Sombra de seccion*/
+}
+
+
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                                          CONTACTO                                             */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+
+#contacto{
+    background-color: rgba(71, 71, 255, 0.459);
+    border-radius: 10px;
+    margin-top: 5%;
+    padding: 10px;
+    color: white;
+    font-size: 8px
+    
+    
+}
+
+.correo,
+.linkedln,
+.telefono{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contacto img{
+    height: 30px;
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------*/
+/*---------------------RESPONSIVE---------------------------*/
+/*----------------------------------------------------------*/
+
+@media(max-width: 768px)
+{
+.menu .links,
+.menu .action_btn{
+    display: none;
+}
+.menu .toggle_btn{
+    display: block;
+}
+.dropdown_menu{
+    display: block;
+}
+
+.links{
+    
+    text-decoration: none;
+}
+
+
+#nombrepresentacion{
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    margin-left: -20px;
+    font-style:normal;
+    
+}
+#nombrepresentacion p{
+    margin-top: -15%;
+    margin-bottom: 20%;
+}
+
+
+
+
+#aboutme{
+    margin-top: -120px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.sobremi{
+    padding: 20px;
+    text-align: justify;
+}
+
+
+.galeriafotos{
+    margin-top: 10px;
+    margin-left: -60px;
+}
+
+}
+
+
+
+
+
+
+@media(max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+
+
+
+    #nombrepresentacion{  
+        display: flex;
+        text-align: center;
+        margin-left: -20px;
+        font-style:normal;
+        }
+    #aboutme{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        
+}
+
+
+    #experiencia{
+        display: flex;
+        flex-direction: column; /*-------------------Este para que se acomode vertical*/
+    }
+
+
+
+
+
+    
+}

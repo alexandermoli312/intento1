@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlexanderWeb</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="home"> </div>
+
+    <!----------------------------------------------------------->
+    <!----------------- Barra Superior ( MENU )------------------>
+    <!----------------------------------------------------------->
+
+    <!--HEADER = ES EL ENCABEZAD OSEA LA PARTE SUPERIOR-->
+    <header>
+
+        <div class="menu">
+            <div class="logo">
+                <img src="imagenes/Logo.png">
+            </div>
+        
+            <ul class="links">
+            <li> <a href="#home">Inicio</a> </li>
+            <li> <a href="#aboutme">Sobre-Mi</a> </li>
+            <li> <a href="#experiencia">Experiencia</a> </li>
+            <li> <a href="#proyectos">Proyectos</a> </li>
+            <li> <a href="#contacto">Contacto</a> </li>
+            </ul>
+            
+            <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i></div>
+        </div>
+
+
+        <div class="dropdown_menu">
+            <li> <a href="#home">Inicio</a> </li>
+            <li> <a href="#aboutme">Sobre-Mi</a> </li>
+            <li> <a href="#experiencia">Experiencia</a> </li>
+            <li> <a href="#proyectos">Proyectos</a> </li>
+            <li> <a href="#contacto">Contacto</a> </li>
+        </div>
+
+    </header>
+
+    <script>
+        const togglebtn = document.querySelector('.toggle_btn')
+        const togglebtnicon = document.querySelector('.toggle_btn i')
+        const dropdownmenu = document.querySelector('.dropdown_menu')
+
+
+        togglebtn.onclick = function (){
+            dropdownmenu.classList.toggle('open')
+            const isopen = dropdownmenu.classList.contains('open')
+
+            togglebtnicon.classList = isopen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+
+    <!--------------------------------------------------------------------------->
+    <!------------------------ Presentacion y foto ------------------------------>
+    <!--------------------------------------------------------------------------->
+
+    <!-- TODO SE SEPARA POR SECCIONES PARA MEJOR ORGANIZACION -->
+    <!-- SE UTILIZA ( <section>  </section>  )-->
+
+
+    <section id="nombrepresentacion">
+        <div class="nombrepresentacion">
+            <h4> ALEXANDER <br> MOLINA RAMOS</h4>
+            <p> Ingeniero en Mecatronica, Disenador web por hobbie,<br>
+                Apacionado de la tecnologia y de los Autos.
+            </p>
+        </div>
+
+
+    </section>
+
+
+
+
+
+    <!--------------------------------------------------------------------------->
+    <!----------------------------- about me ------------------------------------>
+    <!--------------------------------------------------------------------------->
+
+
+
+    <section id="aboutme">
+    <!-- <h2> Un Poco Sobre Mi </h2> -->
+        <div class="sobremi">
+            <p> Un Poco Sobre Mi. <br><br>
+                Me Presento mi nombre es Jesus Alexander Molina Ramos, tengo 25 años, Soy Egresado
+                de la universidad Tecnologica de ciudad juares (UTCJ).<br>
+                Tengo 5 años trabajando como Ingeniero Industrial en distintas companias como en Wiwynn y Yazaki,
+                he trabajado mejorando el proceso de produccion y calidad de los productos.<br><br>
+                En algunos de mis pasatiempos procuro dedicarme a desarrollar paginas para practicar mis
+                habilidades como programador / Desarrollador web, ya que es una de mis metas dedicarme a eso.<br>
+
+                Otro de mis pasatiempos favoritos son los autos, actualmente estoy restaurando un Mustang SN95
+                me gusta salir a manejar junto con amigos, simplemente salir a pasar el rato.
+                <br><br>
+                A lo largo de mi vida profecional como ingeniero industrial me he dado cuenta que todo
+                se puede mejorar o optimizar.
+            </p>
+        </div>
+
+        <div class="galeriafotos">
+            <img src="/imagenes/auto1.jpg">
+            <img src="/imagenes/auto2.jpg">
+            <img src="/imagenes/me.jpg">
+            <img src="/imagenes/tecnologia1.jpg">
+            <img src="/imagenes/tecnologia2.jpg">
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+    <!--------------------------------------------------------------------------->
+    <!----------------------------- Experience ---------------------------------->
+    <!--------------------------------------------------------------------------->
+
+    <section id="experienciatitulo">
+        <div>
+            <h2>! EXPERIENCIA LABORAL !</h2>
+            <!--    <hr>    --PARA PONER UNA LINEA DE SEPARACIOON-->
+        </div>
+    </section>
+
+
+    <section id="experiencia">
+        <div class="wiwynn">
+            <img src="/imagenes/wiwynn.png">
+            <h4> Industrial Engineer | Wiwynn Corporation |</h4>
+            <p> Estas son algunas de las actividades que realicé en Wiwynn.<br>
+                Definir procesos en el ensamble de Servidores tanto a nivel de Componente como hasta
+                el nivel de Rack, Toma de tiempos, Creación de diagramas de flujo, Desarrollo de
+                instrucciones de trabajo, Capacitación de producción personal, Cambios de ingeniería (ECO),
+                balanceo de líneas de producción, Mejora continua, Implementación de Nuevas Tecnologías,
+                metodología Kaizen.<br><br>
+                lectura de planos nivel componente, lectura de plano nivel layout (area de trabajo)
+                Optimización del tiempo, Implementación de herramientas,
+                Manejo correcto de materiales, Sistematización de puestos de trabajo, Implementación de
+                fixturas para evitar daño, Mejora del sistema y método de trabajo.</p>
+        </div>
+
+        <div class="yazaki">
+            <img src="/imagenes/yazakilogo.png">
+            <h4> Industrial Engineer | Yazaki Corporation |</h4>
+            <p> Estas son algunas de las actividades que realice.<br> <br>
+                Definir procesos en el montaje de arneses para Tesla, Toma de decisiones, balanceo de líneas de
+                producción,
+                Lectura Planos de "disposición de arneses sobre panel".<br>
+                Implementación de estructuras y fixturas para conectores de arnes, Desarrollo de ayudas
+                visuales. Mejoras (KAIZEN) para mejorar el proceso, Optimización y toma de tiempos,
+                Sistematización de puestos de trabajo, Implementación de herramientas, Validación de ergonomía,
+                Optimización de Layout del espacio. </p>
+
+        </div>
+    </section>
+
+
+    <!--------------------------------------------------------------------------->
+    <!----------------------------- Contacto ------------------------------------>
+    <!--------------------------------------------------------------------------->
+
+
+
+    <section id="contacto">
+        <div class="correo">
+            <img src="/imagenes/correo.png">
+            <h2> Correo: Jesus1998231298@gmail.com</h2>
+        </div>
+
+        <div class="linkedln">
+            <img src="/imagenes/linkedln2.png">
+            <h2> Linkedln: Jesus Alexander Molina Ramos. </h2>
+        </div>
+
+        <div class="telefono">
+            <img src="/imagenes/telefono.png">
+            <h2> Telefono: 656-5-95-45-78 </h2>
+        </div>
+
+
+
+    </section>
+
+</body>
+
+</html>
